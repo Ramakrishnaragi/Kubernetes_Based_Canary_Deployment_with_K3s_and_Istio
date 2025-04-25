@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ramakrishnaragi/app:v1
+        image: <your-docker-hub-username>/app:v1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,5 +36,5 @@ spec:
     spec:
       containers:
       - name: app
-        image: ramakrishnaragi/app:v2
+        image: <your-docker-hub-username>/app:v2
 
