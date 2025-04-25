@@ -20,7 +20,7 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 kubectl cluster-info
 ```
 
-![image](https://github.com/user-attachments/assets/6cee2baf-213b-4f18-9bfc-ade6f08396e1)
+ ![image](https://github.com/user-attachments/assets/6cee2baf-213b-4f18-9bfc-ade6f08396e1)
 
 
 ![image](https://github.com/user-attachments/assets/69aaf871-7a4c-46a5-8e04-1b53936cfeaa)
@@ -34,7 +34,7 @@ helm install istio-base istio/base -n istio-system
 helm install istiod istio/istiod -n istio-system --wait	
 helm install istio-ingress istio/gateway -n istio-system –wait
 kubectl get pods -n istio-system # Verify Istio installation
-
+```
 ![image](https://github.com/user-attachments/assets/554a84df-02cb-4fee-85c7-147aadce8f44)
 
 - Step 3: Label Namespace for Istio Injection
@@ -45,7 +45,7 @@ kubectl label namespace app istio-injection=enabled
 ```
 
 - Step 4: Deploy Sample Application
-  - Create a simple Node.js application with two versions (v1 and v2).
+- Create a simple Node.js application with two versions (v1 and v2).
 ```sh
 kubectl apply -f app-v1.yaml
 kubectl apply -f app-v2.yaml
